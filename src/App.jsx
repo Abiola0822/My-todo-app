@@ -94,14 +94,14 @@ export default function App() {
         <div className="flex gap-2 mb-4">
           <input
             type="text"
-            className="w-full px-3 py-2 rounded border dark:bg-gray-800"
+            className="w-full px-3 py-2 rounded-xl border dark:bg-gray-800"
             placeholder="What do you need to do?..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
           <button
             onClick={handleAddTask}
-            className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-400"
+            className="bg-purple-500 text-white px-4 py-2 rounded-xl hover:bg-purple-400"
           >
             Add
           </button>
@@ -112,12 +112,12 @@ export default function App() {
             type="date"
             value={dueDate}
             onChange={(e) => setDueDate(e.target.value)}
-            className="px-2 py-1 border rounded dark:bg-gray-800"
+            className="px-2 py-1 border rounded-xl dark:bg-gray-800"
           />
           <select
             value={priority}
             onChange={(e) => setPriority(e.target.value)}
-            className="px-2 py-1 border rounded dark:bg-gray-800"
+            className="px-2 py-1 border rounded-xl dark:bg-gray-800"
           >
             <option value="low">Low</option>
             <option value="normal">Normal</option>
@@ -128,7 +128,7 @@ export default function App() {
         <input
           type="text"
           placeholder="Search tasks..."
-          className="w-full px-3 py-2 mb-4 border rounded dark:bg-gray-800"
+          className="w-full px-3 py-2 mb-4 border rounded-xl dark:bg-gray-800"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -138,10 +138,10 @@ export default function App() {
             <motion.button
               key={tab}
               whileTap={{ scale: 0.9 }}
-              className={`px-4 py-2 rounded ${
+              className={`px-4 py-2 rounded-xl ${
                 filter === tab
                   ? "bg-purple-500 text-white"
-                  : "bg-gray-400 dark:bg-gray-700 dark:text-white"
+                  : "bg-gray-400 dark:bg-gray-700 dark:text-white p-3 rounded-xl"
               }`}
               onClick={() => setFilter(tab)}
             >
@@ -159,7 +159,7 @@ export default function App() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.2 }}
-                className={`flex justify-between items-center p-3 rounded shadow ${
+                className={`flex justify-between items-center p-3 rounded-xl shadow ${
                   task.completed
                     ? "bg-green-100 dark:bg-green-800"
                     : "bg-gray-100 dark:bg-gray-800"
